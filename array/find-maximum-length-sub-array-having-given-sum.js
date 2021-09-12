@@ -12,7 +12,7 @@ Subarrays with sum 8 are
  
 The longest subarray is { -5, 5, 3, 5 } having length 4
 */
-let l=0,resultArray = [];
+let l=0;
 const hasSumSubarray = (arr,target) => {
     let sum =0,maxLength=-1, start=0, end=0;
     for(i=0;i<arr.length;i++){
@@ -26,10 +26,7 @@ const hasSumSubarray = (arr,target) => {
            }
         }
     }
-for(n=start;n<=end;n++){
-resultArray[l++]=arr[n];
-}
-    return resultArray;
+return (arr.slice(start,end+1));
 }
 
 var result = hasSumSubarray([  5, 6, -5, 5, 3, 5, 3, -2, 0],8 );
